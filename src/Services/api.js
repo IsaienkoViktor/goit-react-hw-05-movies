@@ -9,30 +9,31 @@ export const getTrending = async () => {
   return data.results;
 };
 
-export const searchMovies = async query => {
+export const getMovieByQuery = async query => {
   const { data } = await axios.get(
     `search/movie?api_key=${API_KEY}&query=${query}&language=en-US&page=1&include_adult=false`
   );
-  return data;
+  return data.results;
 };
 
-export const movieDetails = async movieID => {
+export const getMovieById = async movieID => {
   const { data } = await axios.get(
     `movie/${movieID}?api_key=${API_KEY}&language=en-US'`
   );
   return data;
 };
 
-export const movieCredits = async movieID => {
+export const getMovieCast = async movieID => {
   const { data } = await axios.get(
     `movie/${movieID}/credits?api_key=${API_KEY}&language=en-US`
   );
-  return data;
+  return data.cast;
 };
 
-export const movieReviews = async movieID => {
+export const getReviewsMovie = async movieId => {
   const { data } = await axios.get(
-    `movie/${movieID}/reviews?api_key=${API_KEY}&language=en-US&page=1`
+    `movie/${movieId}/reviews?api_key=${API_KEY}&language=en-US`
   );
-  return data;
+
+  return data.results;
 };

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-import Form from '../components/Form/Form';
-import FilmsList from '../components/FilmList/FilmList';
+import Form from '../../components/Form/Form';
+import FilmsList from '../../components/FilmList/FilmList';
 import { getMovieByQuery } from 'Services/api';
 
 const Movies = () => {

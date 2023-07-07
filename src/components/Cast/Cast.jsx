@@ -1,9 +1,12 @@
-import { ListItem, StyledList } from 'Pages/MoviesDetails.module.jsx';
+import {
+  ListItem,
+  StyledList,
+} from 'Pages/MovieDetails/MoviesDetails.styled.jsx';
 import { getMovieCast } from 'Services/api';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { BASE_POSTER_URL, PLACEHOLDER } from 'utils/constants';
-import { StyledWrapper } from './Cast.module';
+import { StyledWrapper } from './Cast.styled';
 
 const Cast = () => {
   const { movieId } = useParams();

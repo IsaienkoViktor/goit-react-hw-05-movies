@@ -7,7 +7,7 @@ import {
   useLocation,
   useParams,
 } from 'react-router-dom';
-import { BASE_POSTER_URL, PLACEHOLDER } from '../utils/constants';
+import { BASE_POSTER_URL, PLACEHOLDER } from '../../utils/constants';
 import {
   FilmDescr,
   FilmImg,
@@ -18,7 +18,7 @@ import {
   ListItem,
   StyledList,
   StyledListDescr,
-} from './MoviesDetails.module';
+} from './MoviesDetails.styled';
 
 const MoviesDetails = () => {
   const { movieId } = useParams();
@@ -37,6 +37,10 @@ const MoviesDetails = () => {
     };
     fetchMovieById();
   }, [movieId]);
+
+  if (!movie) {
+    return <h1>Error</h1>;
+  }
 
   return (
     <>

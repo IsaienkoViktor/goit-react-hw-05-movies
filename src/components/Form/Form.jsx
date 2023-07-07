@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ButtonSearch, InputSearch } from './Form.module';
+import { ButtonSearch, InputSearch } from './Form.styled';
 
 const Form = ({ setSearchParams }) => {
   const [query, setQuery] = useState('');

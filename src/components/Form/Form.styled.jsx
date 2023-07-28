@@ -45,3 +45,8 @@ export const ButtonSearch = styled.button`
     transform: scale(1.03);
   }
 `;
+
+rgba(109, 84, 235, 1), rgba(101, 35, 146, 1);
+rgba(46, 23, 70, 1), rgba(46, 34, 95, 1);
+rgba(52, 31, 160, 1), rgba(101, 35, 146, 1);
+rgba(101, 35, 146, 1), rgba(52, 31, 160, 1);
